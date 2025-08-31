@@ -3,7 +3,7 @@ import requests
 import json
 import os
 import time
-from datetime import datetim
+from datetime import datetime
 
 
 # Webhook do Discord
