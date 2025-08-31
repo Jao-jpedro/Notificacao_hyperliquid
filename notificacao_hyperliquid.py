@@ -27,7 +27,7 @@ def get_latest_user_trade(wallet):
         data = response.json()
         if data:
             print("✅ Último trade encontrado", flush=True)
-            return data[26]  # cuidado: pode dar IndexError se não houver 27 trades
+            return data[0]  # cuidado: pode dar IndexError se não houver 27 trades
         else:
             print("📭 Nenhuma movimentação encontrada.", flush=True)
             return None
