@@ -127,9 +127,11 @@ def verificar_novos_trades():
 
 # Loop contínuo para manter o script ativo
 if __name__ == "__main__":
+    print("🚀 Script iniciado com sucesso!")
     while True:
         try:
             verificar_novos_trades()
         except Exception as e:
             print(f"❌ Erro inesperado: {e}")
-        time.sleep(60)  # Espera 60 segundos antes de verificar novamente
+        time.sleep(60)
+
