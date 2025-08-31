@@ -1,3 +1,9 @@
+git add notificacao_hyperliquid.py
+git commit -m "Forçando envio de notificação para teste"
+git push
+
+
+
 git init
 git add .
 git commit -m "Primeiro commit"
