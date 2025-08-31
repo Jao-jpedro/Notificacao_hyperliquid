@@ -25,7 +25,7 @@ def get_latest_user_trade(wallet):
     if response.status_code == 200:
         data = response.json()
         if data:
-            return data[0]
+            return data[26]
         else:
             print("Nenhuma movimentação encontrada.")
             return None
