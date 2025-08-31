@@ -102,7 +102,8 @@ def verificar_novos_trades():
             "time": timestamp
         }
 
-        last_trade_summary = load_last_trade()
+        #last_trade_summary = load_last_trade()
+        last_trade_summary = {}
 
         if current_trade_summary != last_trade_summary:
             account_value = get_account_value(wallet_address)
@@ -119,7 +120,7 @@ def verificar_novos_trades():
                 "-----------------------------------------------"
             )
             notify_discord(msg)
-            save_last_trade(current_trade_summary)
+            #save_last_trade(current_trade_summary)
         else:
             print("📭 Nenhuma nova movimentação detectada.")
     else:
