@@ -70,15 +70,15 @@ def notify_discord(message):
         print(response.text, flush=True)
 
 # Temporariamente desativado para evitar erro de escrita
-# def load_last_trade():
-#     if os.path.exists(last_trade_file):
-#         with open(last_trade_file, "r") as f:
-#             return json.load(f)
-#     return {}
+def load_last_trade():
+     if os.path.exists(last_trade_file):
+         with open(last_trade_file, "r") as f:
+             return json.load(f)
+     return {}
 
-# def save_last_trade(trade):
-#     with open(last_trade_file, "w") as f:
-#         json.dump(trade, f)
+def save_last_trade(trade):
+     with open(last_trade_file, "w") as f:
+         json.dump(trade, f)
 
 def verificar_novos_trades():
     latest_fill = get_latest_user_trade(wallet_address)
@@ -107,8 +107,8 @@ def verificar_novos_trades():
             "time": timestamp
         }
 
-        # last_trade_summary = load_last_trade()
-        last_trade_summary = {}  # Forçando envio para teste
+        last_trade_summary = load_last_trade()
+        #last_trade_summary = {}  # Forçando envio para teste
 
         if current_trade_summary != last_trade_summary:
             account_value = get_account_value(wallet_address)
@@ -125,7 +125,7 @@ def verificar_novos_trades():
                 "-----------------------------------------------"
             )
             notify_discord(msg)
-            # save_last_trade(current_trade_summary)
+            save_last_trade(current_trade_summary)
         else:
             print("📭 Nenhuma nova movimentação detectada.", flush=True)
     else:
