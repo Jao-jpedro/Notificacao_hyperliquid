@@ -133,7 +133,6 @@ def verificar_novos_trades():
         if current_trade_summary != last_trade_summary:
             account_value = get_account_value(WALLET_ADDRESS)
             msg = (
-                "-----------------------------------------------\n"
                 "📢 **Nova Operação:**\n"
                 f"📊 Tipo: {operacao}\n"
                 f"📈 PnL: {pnl:.2f} USDC\n"
