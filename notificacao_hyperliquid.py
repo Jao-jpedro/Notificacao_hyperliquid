@@ -134,9 +134,9 @@ def verificar_novos_trades():
             account_value = get_account_value(WALLET_ADDRESS)
             msg = (
                 "📢 **Nova Operação:**\n"
+                f"💼 Valor da Conta: {account_value:.2f} USDC\n"
                 f"📊 Tipo: {operacao}\n"
                 f"📈 PnL: {pnl:.2f} USDC\n"
-                f"💼 Valor da Conta: {account_value:.2f} USDC\n"
                 f"💵 Preço: {preco}\n"
                 f"💰 Quantidade: {quantidade}\n"
                 f"🦉 Ativo: {ativo}\n"
